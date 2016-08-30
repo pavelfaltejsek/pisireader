@@ -1,9 +1,9 @@
 ﻿//  
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
 //  
-using GecoSI.Net.Internal;
+using PISI.Net.Internal;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public interface ICommWriter
     {

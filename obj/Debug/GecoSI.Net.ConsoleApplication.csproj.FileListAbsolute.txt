@@ -1,0 +1,6 @@
+P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\bin\Debug\GecoSI.Net.ConsoleApplication.exe.config
+P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\bin\Debug\GecoSI.Net.ConsoleApplication.exe
+P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\bin\Debug\GecoSI.Net.ConsoleApplication.pdb
+P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\obj\Debug\GecoSI.Net.ConsoleApplication.csprojResolveAssemblyReference.cache
+P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\obj\Debug\GecoSI.Net.ConsoleApplication.exe
+P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\obj\Debug\GecoSI.Net.ConsoleApplication.pdb

@@ -4,7 +4,7 @@
 using System;
 using System.Threading;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public class SiDriver
     {

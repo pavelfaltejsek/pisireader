@@ -4,7 +4,7 @@
 using System;
 using System.Text;
 
-namespace GecoSI.Net.Internal
+namespace PISI.Net.Internal
 {
     public class SiMessage
     {

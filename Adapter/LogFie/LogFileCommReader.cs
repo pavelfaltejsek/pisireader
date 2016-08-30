@@ -4,9 +4,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using GecoSI.Net.Internal;
+using PISI.Net.Internal;
 
-namespace GecoSI.Net.Adapter.LogFie
+namespace PISI.Net.Adapter.LogFie
 {
     public class LogFileCommReader
     {

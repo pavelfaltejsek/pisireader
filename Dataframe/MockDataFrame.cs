@@ -1,9 +1,9 @@
-﻿//  
+﻿//
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
-//  
+//
 using System;
 
-namespace GecoSI.Net.Dataframe
+namespace PISI.Net.Dataframe
 {
     public class MockDataFrame : AbstractDataFrame
     {
@@ -16,12 +16,10 @@ namespace GecoSI.Net.Dataframe
             this.punches = punches;
         }
 
-
         public override ISiDataFrame StartingAt(long zerohour)
         {
             return this;
         }
-
 
         public override string SiSeries
         {

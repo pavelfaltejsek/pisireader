@@ -1,0 +1,7 @@
+S-31-C=A
+S-32-C=B1
+S-33-C=B2
+S-34-C=C
+S-35-C=D
+S-35-36-37-38-39-C=Okruh Q
+S-C=cokoliv

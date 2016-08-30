@@ -1,9 +1,5 @@
-﻿using GecoSI.Net;
-using GecoSI.Net.Internal;
-using Raspberry.IO.Components.Displays.Ssd1306;
-using Raspberry.IO.Components.Displays.Ssd1306.Fonts;
-using Raspberry.IO.GeneralPurpose;
-using Raspberry.IO.InterIntegratedCircuit;
+﻿using PISI.Net;
+using PISI.Net.Internal;
 using System;
 using System.IO;
 using System.IO.Ports;
@@ -11,7 +7,7 @@ using System.Linq;
 using System.Management;
 using System.Threading;
 
-namespace GecoSI.Net.ConsoleApplication
+namespace PISI.Net.ConsoleApplication
 {
     internal class Program
     {
@@ -20,7 +16,11 @@ namespace GecoSI.Net.ConsoleApplication
             //musi behat dokolecka a bude se snazit neco delat
             Console.WriteLine("Starting pi si reader");
 
-            SimpleHTTPServer ws = new SimpleHTTPServer(".", 8085);
+            var db = new SQLite.SQLiteConnection("fofo.sqlite");
+            db.CreateTable<Zavody>();
+            db.Insert(new Zavody() { NazevZavodu = "test" });
+
+            SimpleHTTPServer ws = new SimpleHTTPServer("./web", Properties.Settings.Default.httpport);
 
             DisplayMonoTwoColor display = new DisplayMonoTwoColor();
 
@@ -62,36 +62,60 @@ namespace GecoSI.Net.ConsoleApplication
                         {
                             //windows - cycle ports? ne, musim rict jaky
                             //get ports
-                            String portname = "";
-                            using (var searcher = new ManagementObjectSearcher("SELECT * FROM WIN32_SerialPort"))
+
+                            String portname = Properties.Settings.Default.comport;
+                            if (true)
                             {
-                                string[] portnames = SerialPort.GetPortNames();
-                                var ports = searcher.Get().Cast<ManagementBaseObject>().ToList();
-                                var tList = (from n in portnames join p in ports on n equals p["DeviceID"].ToString() select n + " - " + p["Caption"]).ToList();
+                                ConsoleListener CL = new ConsoleListener();
 
-                                foreach (ManagementBaseObject s in ports)
+                                SiHandler handler = new SiHandler(CL);
+                                try
                                 {
-                                    portname = s["DeviceID"].ToString()
-                                        ;
-                                    if (s["Caption"].ToString().Contains("SPORTident"))
+                                    GecoSiLogger.Log("Handler", "connecting handler " + portname);
+                                    handler.Connect(portname);
+                                    Thread.Sleep(1200);
+                                    while (1 == 1 || handler.IsAlive())
                                     {
-                                        //je to sportident, load
-                                        ConsoleListener CL = new ConsoleListener();
-                                        CL.adisplay = display;
-
-                                        var handler = new SiHandler(CL);
-                                        display.Blue1("Port: " + i);
-                                        Console.WriteLine("connecting handler " + portname);
-                                        handler.Connect(portname);
-                                        while (handler.IsAlive())
-                                        {
-                                            display.Idle();
-                                            Thread.Sleep(50);
-                                        }
-                                        Console.WriteLine("CYCLE continue!");
+                                        Thread.Sleep(50);
                                     }
                                 }
+                                finally
+                                {
+                                    //          handler.freeport();
+                                }
+                                Console.WriteLine("CYCLE continue!");
                             }
+                            else
+
+                                using (var searcher = new ManagementObjectSearcher("SELECT * FROM WIN32_SerialPort"))
+                                {
+                                    string[] portnames = SerialPort.GetPortNames();
+                                    var ports = searcher.Get().Cast<ManagementBaseObject>().ToList();
+                                    var tList = (from n in portnames join p in ports on n equals p["DeviceID"].ToString() select n + " - " + p["Caption"]).ToList();
+
+                                    foreach (ManagementBaseObject s in ports)
+                                    {
+                                        portname = s["DeviceID"].ToString()
+                                            ;
+                                        if (s["Caption"].ToString().Contains("SPORTident"))
+                                        {
+                                            //je to sportident, load
+                                            ConsoleListener CL = new ConsoleListener();
+                                            CL.adisplay = display;
+
+                                            var handler = new SiHandler(CL);
+                                            display.Blue1("Port: " + i);
+                                            Console.WriteLine("connecting handler " + portname);
+                                            handler.Connect(portname);
+                                            while (handler.IsAlive())
+                                            {
+                                                display.Idle();
+                                                Thread.Sleep(50);
+                                            }
+                                            Console.WriteLine("CYCLE continue!");
+                                        }
+                                    }
+                                }
                         }
                     }
                     catch (Exception e)

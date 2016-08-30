@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GecoSI.Net.Dataframe
+namespace PISI.Net.Dataframe
 {
     public class ByteFrame
     {
         public ByteFrame()
         {
-            
         }
 
         public ByteFrame(byte[] frame)

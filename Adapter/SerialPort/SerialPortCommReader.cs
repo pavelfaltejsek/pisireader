@@ -4,9 +4,9 @@
 using System;
 using System.IO.Ports;
 using System.Linq;
-using GecoSI.Net.Internal;
+using PISI.Net.Internal;
 
-namespace GecoSI.Net.Adapter.SerialPort
+namespace PISI.Net.Adapter.SerialPort
 {
     internal class SerialPortCommReader
     {

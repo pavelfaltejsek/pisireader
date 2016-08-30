@@ -1,0 +1,134 @@
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+READ 0002 00f0 0003 0000 0002 004d 000d 001b 0003 
+SEND 0002 0083 0002 0074 0001 0004 0014 0003 
+--> ConfigCheckDriverState
+READ 0002 0083 0004 0000 0002 0074 0005 00b1 0058 0003 
+SEND 0002 0083 0002 0033 0001 0016 0011 0003 
+--> Si6CardblocksSettingDriverState
+READ 0002 0083 0004 0000 0002 0033 00c1 0021 00c6 0003 
+[Info] SiCard6 192 Punches Mode Disabled
+SEND 0002 00f9 0001 0002 0014 000a 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+READ 0002 00f9 0003 0000 0002 0002 00f6 001b 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+READ 0002 00f0 0003 0000 0002 004d 000d 001b 0003 
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+SEND 0002 0083 0002 0074 0001 0004 0014 0003 
+--> ConfigCheckDriverState
+[Error]  #run# System.TimeoutException: asový limit operace vyprael.
+   v GecoSI.Net.SiMessageQueue.TimeoutPoll() v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Internal\SiMessageQueue.cs:Yádek 28
+   v GecoSI.Net.SiDriverState.PollAnswer(SiMessageQueue queue, Byte command) v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Internal\SiDriverState.cs:Yádek 117
+   v GecoSI.Net.SiDriverState.ConfigCheckDriverState.Receive(SiMessageQueue queue, ICommWriter writer, SiHandler siHandler) v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Internal\SiDriverState.cs:Yádek 184
+   v GecoSI.Net.SiDriver.Run() v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Internal\SiDriver.cs:Yádek 45
+! CommStatus
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+[Error]  #serialEvent# System.InvalidOperationException: Port je zavYen.
+   v System.IO.Ports.SerialPort.ReadByte()
+   v GecoSI.Net.Adapter.SerialPort.SerialPortCommReader.Accumulate() v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Adapter\SerialPort\SerialPortCommReader.cs:Yádek 65
+   v GecoSI.Net.Adapter.SerialPort.SerialPortCommReader.port_DataReceived(Object sender, SerialDataReceivedEventArgs e) v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Adapter\SerialPort\SerialPortCommReader.cs:Yádek 42
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+[Error] Master station did not answer to startup sequence (high/low baud)
+! CommStatus
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+[Error]  #serialEvent# System.IO.IOException: Vstupn-výstupní operace byla pYeruaena bu z dovodu ukonení podprocesu, nebo na ~ádost aplikace.
+
+   v System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   v System.IO.Ports.SerialStream.EndRead(IAsyncResult asyncResult)
+   v System.IO.Ports.SerialStream.ReadByte(Int32 timeout)
+   v System.IO.Ports.SerialStream.ReadByte()
+   v System.IO.Ports.SerialPort.ReadByte()
+   v GecoSI.Net.Adapter.SerialPort.SerialPortCommReader.Accumulate() v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Adapter\SerialPort\SerialPortCommReader.cs:Yádek 65
+   v GecoSI.Net.Adapter.SerialPort.SerialPortCommReader.port_DataReceived(Object sender, SerialDataReceivedEventArgs e) v P:\ob\sportidenreader\cs\GecoSI.Net-master\src\GecoSI.Net.Console\Adapter\SerialPort\SerialPortCommReader.cs:Yádek 42
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+[Error] Master station did not answer to startup sequence (high/low baud)
+! CommStatus
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+READ 0002 00f0 0003 0000 0002 004d 000d 001b 0003 
+SEND 0002 0083 0002 0074 0001 0004 0014 0003 
+--> ConfigCheckDriverState
+READ 0002 0083 0004 0000 0002 0074 0005 00b1 0058 0003 
+SEND 0002 0083 0002 0033 0001 0016 0011 0003 
+--> Si6CardblocksSettingDriverState
+READ 0002 0083 0004 0000 0002 0033 00c1 0021 00c6 0003 
+[Info] SiCard6 192 Punches Mode Disabled
+SEND 0002 00f9 0001 0002 0014 000a 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+READ 0002 00f9 0003 0000 0002 0002 00f6 001b 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+READ 0002 00e5 0006 0000 0002 0000 0000 0025 00cf 0008 004b 0003 
+! CommStatus
+SEND 0006 
+--> WaitSicardRemovalDriverState
+READ 0002 00e7 0006 0000 0002 0000 0000 0025 00cf 0028 0047 0003 
+--> DispatchReadyDriverState
+! CommStatus
+###### 
+1.1.0001 0:00:00 Start COM2
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+READ 0002 00f0 0003 0000 0002 004d 000d 001b 0003 
+SEND 0002 0083 0002 0074 0001 0004 0014 0003 
+--> ConfigCheckDriverState
+READ 0002 0083 0004 0000 0002 0074 0005 00b1 0058 0003 
+SEND 0002 0083 0002 0033 0001 0016 0011 0003 
+--> Si6CardblocksSettingDriverState
+READ 0002 0083 0004 0000 0002 0033 00c1 0021 00c6 0003 
+[Info] SiCard6 192 Punches Mode Disabled
+SEND 0002 00f9 0001 0002 0014 000a 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+READ 0002 00f9 0003 0000 0002 0002 00f6 001b 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+###### 
+1.1.0001 0:00:00 Start COM2
+! CommStatus
+SEND 00ff 0002 0002 00f0 0001 004d 006d 000a 0003 
+READ 0002 00f0 0003 0000 0002 004d 000d 001b 0003 
+SEND 0002 0083 0002 0074 0001 0004 0014 0003 
+--> ConfigCheckDriverState
+READ 0002 0083 0004 0000 0002 0074 0005 00b1 0058 0003 
+SEND 0002 0083 0002 0033 0001 0016 0011 0003 
+--> Si6CardblocksSettingDriverState
+READ 0002 0083 0004 0000 0002 0033 00c1 0021 00c6 0003 
+[Info] SiCard6 192 Punches Mode Disabled
+SEND 0002 00f9 0001 0002 0014 000a 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus
+READ 0002 00f9 0003 0000 0002 0002 00f6 001b 0003 
+! CommStatus
+--> DispatchReadyDriverState
+! CommStatus

@@ -4,7 +4,7 @@
 using System.IO;
 using System.Linq;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public class FileWriter : Writer
     {

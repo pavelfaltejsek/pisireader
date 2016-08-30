@@ -3,7 +3,7 @@
 //  
 using System;
 
-namespace GecoSI.Net.Dataframe
+namespace PISI.Net.Dataframe
 {
     public class SiPlusSeries
     {

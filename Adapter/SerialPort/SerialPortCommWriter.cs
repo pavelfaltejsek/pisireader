@@ -1,9 +1,9 @@
 ﻿//  
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
 //  
-using GecoSI.Net.Internal;
+using PISI.Net.Internal;
 
-namespace GecoSI.Net.Adapter.SerialPort
+namespace PISI.Net.Adapter.SerialPort
 {
     internal class SerialPortCommWriter : ICommWriter
     {

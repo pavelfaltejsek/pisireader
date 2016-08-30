@@ -6,11 +6,11 @@ using System.Collections.Concurrent;
 using System.IO;
 using System.IO.Ports;
 using System.Threading;
-using GecoSI.Net.Adapter.LogFie;
-using GecoSI.Net.Adapter.SerialPort;
-using GecoSI.Net.Dataframe;
+using PISI.Net.Adapter.LogFie;
+using PISI.Net.Adapter.SerialPort;
+using PISI.Net.Dataframe;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public class SiHandler
     {

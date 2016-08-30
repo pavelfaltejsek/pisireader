@@ -3,7 +3,7 @@
 //
 using System;
 
-namespace GecoSI.Net.Dataframe
+namespace PISI.Net.Dataframe
 {
     public abstract class AbstractDataFrame : ByteFrame, ISiDataFrame
     {
@@ -70,6 +70,7 @@ namespace GecoSI.Net.Dataframe
 
         public void PrintString()
         {
+            //tohle sem nepatri
             //tady se netiskne, viz jinde
             Console.WriteLine("{0}: {1} ", SiSeries, SiNumber);
             Console.WriteLine("(Start: {0} ", FormatTime(StartTime));
@@ -86,6 +87,7 @@ namespace GecoSI.Net.Dataframe
 
         public string GetCSVReadoutString()
         {
+            //to sem nepatri
             string r = "";
             try
             {

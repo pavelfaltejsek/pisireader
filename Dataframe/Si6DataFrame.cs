@@ -1,10 +1,10 @@
 ﻿//
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
 //
-using GecoSI.Net.Internal;
+using PISI.Net.Internal;
 using System;
 
-namespace GecoSI.Net.Dataframe
+namespace PISI.Net.Dataframe
 {
     public class Si6DataFrame : Si6PlusAbstractDataFrame
     {

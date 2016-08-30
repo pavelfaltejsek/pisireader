@@ -3,7 +3,7 @@
 //  
 using System;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public static class ExceptionExtensions
     {

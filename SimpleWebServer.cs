@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace GecoSI.Net.ConsoleApplication
+namespace PISI.Net.ConsoleApplication
 {
     public class SimpleHTTPServer
     {

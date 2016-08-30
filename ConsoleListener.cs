@@ -1,14 +1,10 @@
-﻿using GecoSI.Net.Dataframe;
-using IniParser;
-using IniParser.Model;
-using Raspberry.IO.Components.Displays.Ssd1306;
-using Raspberry.IO.Components.Displays.Ssd1306.Fonts;
+﻿using PISI.Net.Dataframe;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Ports;
 
-namespace GecoSI.Net.ConsoleApplication
+namespace PISI.Net.ConsoleApplication
 {
     public class Zavod
     {

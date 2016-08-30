@@ -1,12 +1,12 @@
 ﻿//
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
 //
-using GecoSI.Net.Dataframe;
-using GecoSI.Net.Internal;
+using PISI.Net.Dataframe;
+using PISI.Net.Internal;
 using System;
 using System.Threading;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public class SiDriverState
     {

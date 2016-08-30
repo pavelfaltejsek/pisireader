@@ -2,9 +2,9 @@
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
 //  
 using System;
-using GecoSI.Net.Dataframe;
+using PISI.Net.Dataframe;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public interface ISiListener
     {

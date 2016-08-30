@@ -5,7 +5,7 @@ using System;
 using System.Configuration;
 using System.IO;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public class GecoSiLogger
     {

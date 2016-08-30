@@ -3,7 +3,7 @@
 //  
 using System;
 
-namespace GecoSI.Net.Adapter.LogFie
+namespace PISI.Net.Adapter.LogFie
 {
     public class LogFilePort : ISiPort
     {

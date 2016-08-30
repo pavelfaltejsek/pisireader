@@ -3,9 +3,9 @@
 //  
 using System;
 using System.Collections.Concurrent;
-using GecoSI.Net.Internal;
+using PISI.Net.Internal;
 
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public class SiMessageQueue : BlockingCollection<SiMessage>
     {

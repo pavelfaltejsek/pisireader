@@ -3,7 +3,7 @@
 //  
 using System.IO.Ports;
 
-namespace GecoSI.Net.Adapter.SerialPort
+namespace PISI.Net.Adapter.SerialPort
 {
     public class SerialComPort : ISiPort
     {

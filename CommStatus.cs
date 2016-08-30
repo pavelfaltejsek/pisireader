@@ -1,7 +1,7 @@
 ﻿//  
 //  Copyright (c) 2013-2014 Simon Denier & Yannis Guedel
 //  
-namespace GecoSI.Net
+namespace PISI.Net
 {
     public enum CommStatus
     {
